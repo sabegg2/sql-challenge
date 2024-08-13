@@ -7,7 +7,7 @@ In the EmployeeSQL folder, I have included:
 ![Entity_Relationship_Diagram](EmployeeSQL/Entity_Relationship_Diagram.png?raw=true)
 
 (2) A pdf of the Entity Relationship Diagram_Documentation from https://app.quickdatabasediagrams.com/#.
-[Entity_Relationship_Diagram_Documentation](EmployeeSQL/Entity Relationship Diagram_Documentation.pdf)
+[Entity_Relationship_Diagram_Documentation](EmployeeSQL/Entity_Relationship_Diagram_Documentation.pdf)
 
 (3) A Data_Engineering.sql file of my table schemata. Used the PostgreSQL output from https://app.quickdatabasediagrams.com/#/ as a starter for my Data_Engineering.sql.
 [Data_Engineering](EmployeeSQL/Data_Engineering3.sql)
