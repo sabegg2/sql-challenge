@@ -11,4 +11,4 @@ In the EmployeeSQL folder, I have included:
 
 (4) A Data_Analysis.sql file of my queries. 
 
-I also checked that the primary keys were all unique. The code for this is the checkunique.ipynb notebook file in the data folder.
+I also checked that the primary keys were all unique in the respective tables. The code for this is the checkunique.ipynb notebook file in the data folder.
