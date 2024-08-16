@@ -69,3 +69,13 @@ FROM employees
 GROUP BY last_name
 ORDER BY
 COUNT(last_name) DESC;
+
+-- Write a query to get the number of copies of a film title that exist in the inventory. 
+SELECT film_id, COUNT(film_id) as "count"
+FROM inventory
+GROUP BY film_id;
+
+
+-- * Create a view named `title_count` from the above query.
+
+-- * Query the newly created view to find all the titles that have 7 copies.
