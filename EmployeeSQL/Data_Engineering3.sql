@@ -9,12 +9,12 @@
 -- (4) Finally I ran the Data Analysis queries (in Data_Analysis.sql file)
 
 -- Drop Tables if Existing
-DROP TABLE IF EXISTS dept_manager;
-DROP TABLE IF EXISTS dept_emp;
-DROP TABLE IF EXISTS salaries;
-DROP TABLE IF EXISTS employees;
-DROP TABLE IF EXISTS departments;
-DROP TABLE IF EXISTS titles;
+--DROP TABLE IF EXISTS dept_manager;
+--DROP TABLE IF EXISTS dept_emp;
+--DROP TABLE IF EXISTS salaries;
+--DROP TABLE IF EXISTS employees;
+--DROP TABLE IF EXISTS departments;
+--DROP TABLE IF EXISTS titles;
 
 -- The following code is developed off of an export from QuickDBD after creating 
 --   DB schema diagram: https://www.quickdatabasediagrams.com/.
@@ -24,44 +24,44 @@ DROP TABLE IF EXISTS titles;
 -- PRIMARY KEYs identified CREATE TABLE rather than via ALTER TABLE.
 
 CREATE TABLE titles (
-    title_id CHAR(5)   PRIMARY KEY,
-    title VARCHAR(30)   NOT NULL
+    title_id CHAR(5) PRIMARY KEY,
+    title VARCHAR(30) NOT NULL
 );
 
 CREATE TABLE departments (
-    dept_no CHAR(4)   PRIMARY KEY,
-    dept_name VARCHAR(30)   NOT NULL
+    dept_no CHAR(4) PRIMARY KEY,
+    dept_name VARCHAR(30) NOT NULL
 );
 
 CREATE TABLE employees (
-    emp_no int   PRIMARY KEY,
-    emp_title_id CHAR(5)   NOT NULL,
-    birth_date date,
-    first_name VARCHAR(20)   NOT NULL,
-    last_name VARCHAR(20)   NOT NULL,
-    sex CHAR(1)   NOT NULL,
-    hire_date date   NOT NULL,
-	FOREIGN KEY(emp_title_id) REFERENCES titles (title_id)
+    emp_no int PRIMARY KEY,
+    emp_title_id CHAR(5) NOT NULL,
+    birth_date date, -- could be null since not used in analysis
+    first_name VARCHAR(20) NOT NULL,
+    last_name VARCHAR(20) NOT NULL,
+    sex CHAR(1) NOT NULL,
+    hire_date date NOT NULL,
+	FOREIGN KEY(emp_title_id) REFERENCES titles(title_id)
 );
 
 CREATE TABLE salaries (
-    emp_no int   NOT NULL,
-    salary money   NOT NULL,
-	FOREIGN KEY(emp_no) REFERENCES employees (emp_no)
+    emp_no int NOT NULL,
+    salary money NOT NULL,
+	FOREIGN KEY(emp_no) REFERENCES employees(emp_no)
 );
 
 CREATE TABLE dept_emp (
-    emp_no int   NOT NULL,
-    dept_no CHAR(4)   NOT NULL,
-	FOREIGN KEY(emp_no) REFERENCES employees (emp_no),
-	FOREIGN KEY(dept_no) REFERENCES departments (dept_no)
+    emp_no int NOT NULL,
+    dept_no CHAR(4) NOT NULL,
+	FOREIGN KEY(emp_no) REFERENCES employees(emp_no),
+	FOREIGN KEY(dept_no) REFERENCES departments(dept_no)
 );
 
 CREATE TABLE dept_manager (
-    dept_no CHAR(4)   NOT NULL,
-    emp_no int   NOT NULL,
-	FOREIGN KEY(emp_no) REFERENCES employees (emp_no),
-	FOREIGN KEY(dept_no) REFERENCES departments (dept_no)
+    dept_no CHAR(4) NOT NULL,
+    emp_no int NOT NULL,
+	FOREIGN KEY(emp_no) REFERENCES employees(emp_no),
+	FOREIGN KEY(dept_no) REFERENCES departments(dept_no)
 );
 
 --ALTER TABLE employees ADD CONSTRAINT fk_employees_emp_title_id FOREIGN KEY(emp_title_id)
