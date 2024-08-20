@@ -8,7 +8,7 @@ In the EmployeeSQL folder, I have included:
 
 (2) A pdf of the [Entity_Relationship_Diagram_Documentation.pdf](EmployeeSQL/Entity_Relationship_Diagram_Documentation.pdf) from https://app.quickdatabasediagrams.com/#.
 
-(3) A [Data_Engineering3.sql](EmployeeSQL/Data_Engineering3.sql) file of my table schemata. Used the PostgreSQL output from https://app.quickdatabasediagrams.com/#/ as a starter for my Data_Engineering.sql.
+(3) A [Data_Engineering.sql](EmployeeSQL/Data_Engineering.sql) file of my table schemata. Used the PostgreSQL output from https://app.quickdatabasediagrams.com/#/ as a starter for my Data_Engineering.sql.
 
 (4) A [Data_Analysis.sql](EmployeeSQL/Data_Analysis.sql) file of my queries. Below are image clips of the ouput from the first 9 or so rows of each query. 
 
