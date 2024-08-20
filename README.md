@@ -3,7 +3,7 @@ Module 9 Challenge
 
 In the EmployeeSQL folder, I have included:
 
-(1) An image file of the Entity_Relationship_Diagram from https://app.quickdatabasediagrams.com/#. Note that DBD has that limitation unfortunately so we cannot do composite keys (which I created in pgAdmin for the dept_emp and dept_manager tables).
+(1) An image file of the Entity_Relationship_Diagram from https://app.quickdatabasediagrams.com/#. Note that DBD has that limitation unfortunately so we cannot do composite keys (which I created in pgAdmin for the dept_emp and dept_manager tables). Also, since there are some employees that are part of more than one department and it is possible that one employee is a manager of more than one department, I made the emp_no in the dept_emp and dept_manager tables many to one relationshps with the emp_no in the employees table.
 ![Entity_Relationship_Diagram.png](EmployeeSQL/Entity_Relationship_Diagram.png?raw=true)
 
 (2) A pdf of the [Entity_Relationship_Diagram_Documentation.pdf](EmployeeSQL/Entity_Relationship_Diagram_Documentation.pdf) from https://app.quickdatabasediagrams.com/#.
