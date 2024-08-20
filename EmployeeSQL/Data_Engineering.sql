@@ -60,5 +60,5 @@ CREATE TABLE dept_manager (
     emp_no int NOT NULL,
 	FOREIGN KEY(emp_no) REFERENCES employees(emp_no),
 	FOREIGN KEY(dept_no) REFERENCES departments(dept_no),
-	PRIMARY KEY(emp_no,dept_no) -- composite key, since possible to have one employee a manager for more than one department
+	PRIMARY KEY(dept_no,emp_no) -- composite key, since possible to have one employee a manager for more than one department
 );
