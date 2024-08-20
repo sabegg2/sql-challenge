@@ -3,7 +3,7 @@ Module 9 Challenge
 
 In the EmployeeSQL folder, I have included:
 
-(1) An image file of the Entity_Relationship_Diagram from https://app.quickdatabasediagrams.com/#.
+(1) An image file of the Entity_Relationship_Diagram from https://app.quickdatabasediagrams.com/#. Note that DBD has that limitation unfortunately so we cannot do composite keys (which I created in pgAdmin for the dept_emp and dept_manager tables).
 ![Entity_Relationship_Diagram.png](EmployeeSQL/Entity_Relationship_Diagram.png?raw=true)
 
 (2) A pdf of the [Entity_Relationship_Diagram_Documentation.pdf](EmployeeSQL/Entity_Relationship_Diagram_Documentation.pdf) from https://app.quickdatabasediagrams.com/#.
@@ -44,5 +44,8 @@ Query 8: List the frequency counts, in descending order, of all the employee las
 
 <img src="EmployeeSQL/Data_Analysis_Output_Clips/query8.png" width=400>
 
-I also checked that the primary keys were all unique in the respective tables. The code for this is the [checkunique.ipynb](data/checkunique.ipynb) notebook file in the data folder.
+
+Note on Primary and Composite Keys
+
+I checked that the primary keys were all unique in the respective tables. The code for this is the [checkunique.ipynb](data/checkunique.ipynb) notebook file in the data folder. This allowed me to discover that there emp_no in the dept_emp table is repeated (i.e. some employees in more than one department) so this table requires a composite key using both emp_no and dept_no for a primary key. Although the dept_manager table did not have any repeated emp_no and emp_no could be made the primary key, I figure it is possible to have one employee be a manager for more than one department, so I created a composite key with dept_no and emp_no for this table as well.
 
