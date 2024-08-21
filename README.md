@@ -1,7 +1,7 @@
 # sql-challenge
 Module 9 Challenge
 
-## Files and Example Output
+## Files
 
 In the EmployeeSQL folder, I have included:
 
@@ -12,7 +12,12 @@ In the EmployeeSQL folder, I have included:
 
 (3) A [Data_Engineering.sql](EmployeeSQL/Data_Engineering.sql) file of my table schemata. Used the PostgreSQL output from https://app.quickdatabasediagrams.com/#/ as a starter for my Data_Engineering.sql.
 
-(4) A [Data_Analysis.sql](EmployeeSQL/Data_Analysis.sql) file of my queries. Below are image clips of the ouput from the first 9 or so rows of each query. 
+(4) A [Data_Analysis.sql](EmployeeSQL/Data_Analysis.sql) file of my queries. 
+
+
+## Example Output
+
+Below are image clips of the ouput from the first 9 or so rows of each query of the Data Analysis. 
 
 Query 1: List the employee number, last name, first name, sex, and salary of each employee.
 
