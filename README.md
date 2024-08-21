@@ -1,5 +1,6 @@
 # sql-challenge
-Module 9 Challenge
+- Module 9 Challenge
+- Steph Abegg
 
 ## Files
 
